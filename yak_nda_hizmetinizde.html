@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Yakında</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+        }
+        /* Smooth subtle floating animation for visual appeal */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen flex flex-col justify-center items-center p-4 m-0 overflow-hidden select-none">
+
+    <!-- Main Container -->
+    <div class="flex flex-col items-center justify-center text-center max-w-lg w-full space-y-8">
+        
+        <!-- Image Container with Glow Effect -->
+        <div class="relative group animate-float">
+            <!-- Subtle glow background effect -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-red-600 via-purple-600 to-indigo-600 rounded-3xl blur-md opacity-50 group-hover:opacity-80 transition duration-1000"></div>
+            
+            <!-- Exact user uploaded husky image embedded as base64 -->
+            <img src="siteacılıyo_2.jpg" 
+                 onerror="this.onerror=null; this.src='https://images.squarespace-cdn.com/content/v1/5a22e8fb715f8e02fa883011/1601053073740-O2N6CXR3USXZW5C5S8A0/husky.jpg';"
+                 alt="Gizli gizli girme husky" 
+                 class="relative rounded-2xl w-72 h-72 sm:w-84 sm:h-84 object-cover shadow-2xl border-2 border-neutral-700/80 bg-neutral-900" />
+        </div>
+
+        <!-- Text Section -->
+        <div class="space-y-3">
+            <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white drop-shadow-[0_2px_15px_rgba(239,68,68,0.4)]">
+                Gizli gizli girme <span class="inline-block hover:scale-125 transition-transform cursor-pointer text-red-500">:)</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-neutral-300 tracking-wide drop-shadow">
+                site yakında
+            </p>
+        </div>
+
+        <!-- Pulse indicator -->
+        <div class="flex items-center space-x-2 pt-2">
+            <span class="w-2.5 h-2.5 bg-red-500 rounded-full animate-ping"></span>
+            <span class="text-xs text-neutral-500 uppercase tracking-widest font-mono">Yakında Hizmetinizde</span>
+        </div>
+
+    </div>
+
+</body>
+</html>
